@@ -74,9 +74,7 @@ module top(
     end
 
     assign led[3:0] = result;
-
     assign led[4] = carry;
-
     assign led[5] = (result == 4'b0000);
 
 endmodule
