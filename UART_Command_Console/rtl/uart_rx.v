@@ -57,7 +57,6 @@ module uart_rx(
                 if (baud_counter == 867) begin
                     baud_counter <= 0;
 
-                    // Sample one data bit
                     data[bit_index] <= rx_sync;
 
                     if (bit_index == 7)
@@ -74,7 +73,6 @@ module uart_rx(
                     baud_counter <= 0;
                     state <= IDLE;
 
-                    // Valid stop bit means byte received
                     if (rx_sync == 1)
                         valid <= 1;
                 end
