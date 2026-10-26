@@ -40,7 +40,6 @@ module uart_rx(
             end
 
             START: begin
-                // Wait approximately half a bit
                 if (baud_counter == 433) begin
                     baud_counter <= 0;
 
